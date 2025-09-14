@@ -204,6 +204,7 @@ export default function Contact() {
                 method="POST"
                 data-netlify="true"
                 className="contact-form"
+                action="/thank-you.html"
               >
                 {/* Hidden input required by Netlify */}
                 <input type="hidden" name="form-name" value="contact" />
