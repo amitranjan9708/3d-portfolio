@@ -25,9 +25,15 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    const formDataObj = new FormData(e.target);
+  
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formDataObj
+      });
+  
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
@@ -38,8 +44,12 @@ export default function Contact() {
         project: '',
         message: ''
       });
-    }, 2000);
+    } catch (error) {
+      console.error("Form submission error", error);
+      setIsSubmitting(false);
+    }
   };
+  
 
   const contactMethods = [
     {
@@ -181,7 +191,7 @@ export default function Contact() {
                 <div className="success-icon">✅</div>
                 <h3>Thank You!</h3>
                 <p>Your message has been sent successfully. I'll get back to you within 24 hours.</p>
-                <button 
+                <button
                   className="btn btn-outline"
                   onClick={() => setIsSubmitted(false)}
                 >
@@ -189,7 +199,15 @@ export default function Contact() {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="contact-form"
+              >
+                {/* Hidden input required by Netlify */}
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div className="form-group">
                   <input
                     type="text"
@@ -265,21 +283,14 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn submit-btn"
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? (
-                    <span>
-                      <span className="spinner"></span>
-                      Sending...
-                    </span>
-                  ) : (
-                    'Send Message'
-                  )}
+                  Send Message
                 </button>
               </form>
+
             )}
           </motion.div>
         </div>
