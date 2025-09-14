@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
+import { emailConfig } from '../config/emailConfig';
 import './Contact.css';
 
 export default function Contact() {
@@ -25,15 +27,34 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
-    const formDataObj = new FormData(e.target);
-  
+
+    // EmailJS configuration
+    const { serviceID, templateID, userID } = emailConfig;
+
+    // Prepare template parameters for EmailJS
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      company: formData.company || 'Not specified',
+      budget: formData.budget,
+      project_type: formData.project,
+      message: formData.message,
+      to_email: 'amitranjan97084@gmail.com', // Your email where you want to receive messages
+      reply_to: formData.email
+    };
+
     try {
-      await fetch("/", {
-        method: "POST",
-        body: formDataObj
-      });
-  
+      // Check if EmailJS is properly configured
+      if (serviceID === 'YOUR_SERVICE_ID' || templateID === 'YOUR_TEMPLATE_ID' || userID === 'YOUR_USER_ID') {
+        throw new Error('EmailJS not configured. Please set up your EmailJS credentials in src/config/emailConfig.js');
+      }
+
+      console.log('Sending email with params:', templateParams);
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(serviceID, templateID, templateParams, userID);
+      console.log('Email sent successfully:', result.text);
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({
@@ -45,8 +66,19 @@ export default function Contact() {
         message: ''
       });
     } catch (error) {
-      console.error("Form submission error", error);
+      console.error("Email sending failed:", error);
       setIsSubmitting(false);
+      
+      // More specific error messages
+      if (error.message.includes('EmailJS not configured')) {
+        alert('EmailJS is not configured yet. Please follow the setup guide or contact me directly at amitranjan97084@gmail.com');
+      } else if (error.text && error.text.includes('403')) {
+        alert('EmailJS authentication failed. Please check your User ID.');
+      } else if (error.text && error.text.includes('404')) {
+        alert('EmailJS service or template not found. Please check your Service ID and Template ID.');
+      } else {
+        alert('Failed to send message. Please try again or contact me directly at amitranjan97084@gmail.com');
+      }
     }
   };
   
@@ -200,14 +232,9 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
                 className="contact-form"
-                action="/thank-you.html"
+                onSubmit={handleSubmit}
               >
-                {/* Hidden input required by Netlify */}
-                <input type="hidden" name="form-name" value="contact" />
 
                 <div className="form-group">
                   <input
@@ -287,8 +314,9 @@ export default function Contact() {
                 <button
                   type="submit"
                   className="btn submit-btn"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
 
