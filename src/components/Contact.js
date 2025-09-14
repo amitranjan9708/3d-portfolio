@@ -45,13 +45,13 @@ export default function Contact() {
     {
       icon: "📧",
       title: "Email",
-      value: "your.email@domain.com",
+      value: "amitranjan97084@gmail.com",
       description: "Send me an email anytime"
     },
     {
       icon: "📱",
       title: "WhatsApp",
-      value: "+1 (555) 123-4567",
+      value: "+91 8789305700",
       description: "Quick response on WhatsApp"
     },
     {
