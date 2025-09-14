@@ -30,13 +30,13 @@ export default function About() {
     {
       year: "2024",
       title: "Senior Full Stack Developer",
-      company: "Freelance (Upwork/Fiverr)",
+      company: "Allen Digital",
       description: "Specialized in 3D web applications and enterprise solutions"
     },
     {
       year: "2022-2023",
-      title: "Lead Frontend Developer",
-      company: "TechCorp Solutions",
+      title: "Software Developer",
+      company: "WhiteHat Jr",
       description: "Led development of React-based applications for Fortune 500 clients"
     },
     {
@@ -48,7 +48,7 @@ export default function About() {
     {
       year: "2019-2020",
       title: "Junior Developer",
-      company: "StartupXYZ",
+      company: "freelancer during college",
       description: "Developed responsive web applications and gained foundational experience"
     }
   ];
