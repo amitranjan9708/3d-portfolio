@@ -3,8 +3,57 @@ import { motion } from 'framer-motion';
 import './Projects.css';
 
 const projects = [
+
+  {
+    id: 0,
+    title: "Palco",
+    description: "A media company",
+    technologies: ["React", "Node.js", "InfluxDB", "MQTT", "Three.js", "Grafana"],
+    image: "https://i.postimg.cc/QCcHh32Q/Screenshot-2025-09-19-at-6-09-26-PM.png",
+    liveUrl: "https://palco-seven.vercel.app",
+    githubUrl: "#",
+    category: "Full Stack",
+    featured: false,
+    results: ""
+  },
   {
     id: 1,
+    title: "YCCE",
+    description: "Yeshwantrao chavan college of Engineering",
+    technologies: ["React", "Node.js", "InfluxDB", "MQTT", "Three.js", "Grafana"],
+    image: "https://i.postimg.cc/qvvyXtfW/Screenshot-2025-09-19-at-6-25-08-PM.png",
+    liveUrl: "https://tbi-ten.vercel.app",
+    githubUrl: "#",
+    category: "Full Stack",
+    featured: false,
+    results: "Now all college data "
+  },
+  {
+    id: 2,
+    title: "Danphe EMR",
+    description: " HIPAA-compliant healthcare platform with patient portals, telemedicine integration, and AI-assisted diagnosis. Serving multiple hospitals and clinics.NOTE : use admin as userid and pass123 as password to login",
+    technologies: ["React", "Node.js", "GraphQL", "PostgreSQL", "AWS", "Microservices"],
+    image: "https://www.appletechsoft.com/wp-content/uploads/2020/06/Hospital-Management-System.jpg",
+    liveUrl: "http://202.51.74.168:302/Account/Login",
+    githubUrl: "#",
+    category: "Healthcare",
+    featured: false,
+    results: "Improved patient satisfaction by 65%, reduced wait times by 40%"
+  },
+  {
+    id: 3,
+    title: "shorts-teck-4k-wallpapers",
+    description: " a website for wallpapers that are 4k and have a tech theme",
+    technologies: ["React", "Three.js", "Node.js", "MongoDB", "AWS", "WebXR"],
+    image: "https://i.postimg.cc/QdnqPghp/Screenshot-2025-09-19-at-6-52-41-PM.png",
+    liveUrl: "https://wallpaper.shortstech.in/",
+    githubUrl: "#",
+    category: "Full Stack",
+    featured: true,
+    results: "now more than 1000 wallpapers are there and users are increasing day by day"
+  },
+  {
+    id: 7,
     title: "E-Commerce Platform 3D",
     description: "A revolutionary 3D e-commerce platform with immersive product visualization, AR try-on features, and real-time inventory management. Built for a Fortune 500 retail company.",
     technologies: ["React", "Three.js", "Node.js", "MongoDB", "AWS", "WebXR"],
@@ -16,19 +65,19 @@ const projects = [
     results: "450% increase in user engagement, 280% boost in conversion rates"
   },
   {
-    id: 2,
+    id: 4,
     title: "AI-Powered Analytics Dashboard",
     description: "Real-time analytics dashboard with AI-driven insights and predictive modeling. Features interactive 3D data visualizations and automated reporting for enterprise clients.",
     technologies: ["React", "D3.js", "Python", "TensorFlow", "PostgreSQL", "Docker"],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
-    liveUrl: "#",
+    liveUrl: "https://dostiq.com",
     githubUrl: "#",
     category: "Data Science",
     featured: true,
     results: "Reduced data analysis time by 75%, serving 10M+ daily requests"
   },
   {
-    id: 3,
+    id:8,
     title: "Virtual Event Platform",
     description: "Immersive 3D virtual event platform supporting up to 10,000 concurrent users. Features spatial audio, interactive booths, and real-time networking capabilities.",
     technologies: ["React", "Three.js", "WebRTC", "Socket.io", "Redis", "Kubernetes"],
@@ -39,18 +88,7 @@ const projects = [
     featured: false,
     results: "Hosted 500+ events, 2M+ total attendees"
   },
-  {
-    id: 4,
-    title: "Healthcare Management System",
-    description: "HIPAA-compliant healthcare platform with patient portals, telemedicine integration, and AI-assisted diagnosis. Serving multiple hospitals and clinics.",
-    technologies: ["React", "Node.js", "GraphQL", "PostgreSQL", "AWS", "Microservices"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop&crop=center",
-    liveUrl: "#",
-    githubUrl: "#",
-    category: "Healthcare",
-    featured: false,
-    results: "Improved patient satisfaction by 65%, reduced wait times by 40%"
-  },
+  
   {
     id: 5,
     title: "Cryptocurrency Trading Bot",
@@ -137,7 +175,8 @@ export default function Projects() {
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href={project.liveUrl} className="btn btn-sm">
+                   
+                    <a href={project.liveUrl} target="_blank" className="btn btn-sm">
                       Live Demo
                     </a>
                     <a href={project.githubUrl} className="btn btn-outline btn-sm">
