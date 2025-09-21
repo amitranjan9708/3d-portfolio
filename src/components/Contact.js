@@ -39,7 +39,7 @@ export default function Contact() {
       budget: formData.budget,
       project_type: formData.project,
       message: formData.message,
-      to_email: 'amitranjan97084@gmail.com', // Your email where you want to receive messages
+      to_email: 'alphatech.wave07@gmail.com', // Your email where you want to receive messages
       reply_to: formData.email
     };
 
