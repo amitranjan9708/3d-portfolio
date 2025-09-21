@@ -99,7 +99,7 @@ export default function Contact() {
     {
       icon: "💼",
       title: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
+      value: "https://www.linkedin.com/company/alphatech-wave/",
       description: "Connect with me professionally"
     },
     {
@@ -107,7 +107,17 @@ export default function Contact() {
       title: "Timezone",
       value: "UTC-5 (EST)",
       description: "Available 9 AM - 6 PM EST"
+    },
+    //instagram
+    {
+      icon: "📸",
+      title: "Instagram",
+      value: "https://www.instagram.com/alphatech_wave/",
+      description: "Follow for latest updates"
+  
+      
     }
+    
   ];
 
   const pricing = [
@@ -342,7 +352,7 @@ export default function Contact() {
                 <span>🟢</span>
                 <span>Fiverr</span>
               </a>
-              <a href="#" className="social-link">
+              <a href="https://www.linkedin.com/company/alphatech-wave/" className="social-link">
                 <span>💼</span>
                 <span>LinkedIn</span>
               </a>
@@ -350,7 +360,26 @@ export default function Contact() {
                 <span>🐙</span>
                 <span>GitHub</span>
               </a>
+              <a href="https://www.instagram.com/alphatech_wave/" className="social-link">
+                <span>📸</span>
+                <span>Instagram</span>
+              </a>
+              
             </div>
+          </div>
+           <div className="developer-tag" style={{ marginTop: '2rem', textAlign: 'center', fontSize: '1rem', color: '#888' }}>
+            Developed by 
+            <strong>
+              <a href="mailto:amitranjan97084@gmail.com" style={{ color: '#888', textDecoration: 'underline', margin: '0 4px' }}>
+                Amit Ranjan
+              </a>
+            </strong>
+            &amp;
+            <strong>
+              <a href="mailto:sankalpdixit2002@gmail.com" style={{ color: '#888', textDecoration: 'underline', margin: '0 4px' }}>
+                Sankalp Dixit
+              </a>
+            </strong>
           </div>
         </motion.div>
       </div>

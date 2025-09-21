@@ -42,7 +42,7 @@ export default function Navigation() {
       <div className="nav-container">
         <div className="nav-logo">
           <span>&lt;</span>
-          <span>Portfolio</span>
+          <span>AlphaTech-Wave</span>
           <span>/&gt;</span>
         </div>
 
