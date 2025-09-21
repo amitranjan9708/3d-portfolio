@@ -87,13 +87,13 @@ export default function Contact() {
     {
       icon: "📧",
       title: "Email",
-      value: "amitranjan97084@gmail.com",
+      value: "alphatech.wave07@gmail.com",
       description: "Send me an email anytime"
     },
     {
       icon: "📱",
       title: "WhatsApp",
-      value: "+91 8789305700",
+      value: "+91 70202 83005",
       description: "Quick response on WhatsApp"
     },
     {
