@@ -106,12 +106,31 @@
 }
 
 @media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+  
   .nav-menu {
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
   
   .nav-menu button {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile menu toggle for very small screens */
+@media (max-width: 360px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-container {
+    justify-content: center;
   }
 }

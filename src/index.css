@@ -48,3 +48,38 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #357abd;
 }
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Improve touch targets */
+  button, .btn, .nav-menu button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  
+  /* Ensure proper spacing on very small screens */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

@@ -146,3 +146,53 @@
     visibility: hidden;
   }
 }
+
+/* Responsive Loading Screen */
+@media (max-width: 768px) {
+  .logo-3d {
+    font-size: 3rem;
+  }
+  
+  .loading-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .loading-text p {
+    font-size: 1rem;
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+  
+  .progress-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-3d {
+    font-size: 2.5rem;
+  }
+  
+  .loading-text h2 {
+    font-size: 1.3rem;
+  }
+  
+  .loading-text p {
+    font-size: 0.9rem;
+  }
+  
+  .progress-bar {
+    width: 120px;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}

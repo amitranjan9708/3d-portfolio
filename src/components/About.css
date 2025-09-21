@@ -251,4 +251,53 @@
     border-right-color: rgba(255, 255, 255, 0.1) !important;
     border-left-color: transparent !important;
   }
+  
+  .about-header p {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-card {
+    padding: 1.2rem;
+  }
+  
+  .achievement-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header {
+    margin-bottom: 2rem;
+  }
+  
+  .about-header p {
+    font-size: 1rem;
+  }
+  
+  .timeline-item {
+    margin-left: 50px;
+  }
+  
+  .timeline-year {
+    left: -80px;
+    flex: 0 0 50px;
+    font-size: 0.8rem;
+    padding: 0.25rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1rem;
+  }
+  
+  .achievement-icon {
+    font-size: 1.8rem;
+  }
+  
+  .about-skills li {
+    font-size: 0.9rem;
+  }
 }

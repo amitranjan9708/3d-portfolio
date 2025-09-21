@@ -342,4 +342,96 @@
   .method-info {
     text-align: center;
   }
+  
+  .contact-header p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .pricing-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .form-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .social-links h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 1rem;
+  }
+  
+  .contact-method {
+    padding: 0.8rem;
+  }
+  
+  .method-icon {
+    font-size: 1.2rem;
+  }
+  
+  .pricing-card {
+    padding: 0.8rem;
+  }
+  
+  .pricing-card h4 {
+    font-size: 1rem;
+  }
+  
+  .price {
+    font-size: 0.9rem;
+  }
+  
+  .duration {
+    font-size: 0.8rem;
+  }
+  
+  .features-list li {
+    font-size: 0.85rem;
+  }
+  
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .social-link {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .social-link span:first-child {
+    font-size: 1.3rem;
+  }
+  
+  .contact-header p {
+    font-size: 1rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .form-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
 }
