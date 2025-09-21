@@ -1,6 +1,9 @@
 .about {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .about-header {
@@ -25,6 +28,9 @@
   gap: 4rem;
   align-items: start;
   margin-bottom: 4rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .about-text h3 {
@@ -218,10 +224,15 @@
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   .achievements-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
   }
   
   .timeline::before {
@@ -231,6 +242,9 @@
   .timeline-item {
     flex-direction: row !important;
     margin-left: 60px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .timeline-year {
@@ -243,6 +257,9 @@
   
   .timeline-content {
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .timeline-content::before {
@@ -254,14 +271,45 @@
   
   .about-header p {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .achievement-card {
     padding: 1.2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .achievement-icon {
     font-size: 2rem;
+  }
+  
+  .achievement-card h4,
+  .achievement-card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .timeline-content h4,
+  .timeline-content h5,
+  .timeline-content p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Prevent timeline overflow */
+  .timeline {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .experience-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -272,10 +320,15 @@
   
   .about-header p {
     font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .timeline-item {
     margin-left: 50px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .timeline-year {
@@ -287,10 +340,16 @@
   
   .timeline-content {
     padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .achievement-card {
     padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .achievement-icon {
@@ -299,5 +358,36 @@
   
   .about-skills li {
     font-size: 0.9rem;
+    word-wrap: break-word;
+  }
+  
+  /* Additional mobile fixes */
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .achievements-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .timeline {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .experience-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .about-skills {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
