@@ -106,7 +106,7 @@ const projects = [
     title: "Smart City IoT Dashboard",
     description: "IoT-powered smart city management system with real-time monitoring of traffic, air quality, energy consumption, and emergency services coordination.",
     technologies: ["React", "Node.js", "InfluxDB", "MQTT", "Three.js", "Grafana"],
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=600&h=400&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1477519242566-6ae87c31d212?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     liveUrl: "#",
     githubUrl: "#",
     category: "IoT",

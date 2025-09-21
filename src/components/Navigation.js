@@ -69,79 +69,90 @@ export default function Navigation() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
-      <div className="nav-container">
-        <div className="nav-logo">
-          <span>&lt;</span>
-          <span>AlphaTech-Wave</span>
-          <span>/&gt;</span>
+    <>
+      <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
+        <div className="nav-container">
+          <div className="nav-logo">
+            <span>&lt;</span>
+            <span>AlphaTech-Wave</span>
+            <span>/&gt;</span>
+          </div>
+
+          {/* Desktop Menu */}
+          <ul className="nav-menu desktop-menu">
+            <li>
+              <button
+                className={activeSection === 'hero' ? 'active' : ''}
+                onClick={() => scrollToSection('hero')}
+              >
+                Home
+              </button>
+            </li>
+            <li>
+              <button
+                className={activeSection === 'about' ? 'active' : ''}
+                onClick={() => scrollToSection('about')}
+              >
+                About
+              </button>
+            </li>
+            <li>
+              <button
+                className={activeSection === 'projects' ? 'active' : ''}
+                onClick={() => scrollToSection('projects')}
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button
+                className={activeSection === 'skills' ? 'active' : ''}
+                onClick={() => scrollToSection('skills')}
+              >
+                Skills
+              </button>
+            </li>
+            <li>
+              <button
+                className={activeSection === 'contact' ? 'active' : ''}
+                onClick={() => scrollToSection('contact')}
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+
+          {/* Desktop CTA */}
+          <div className="nav-cta desktop-cta">
+            <a href="#contact" className="btn btn-outline">
+              Hire Me
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
+      </nav>
 
-        {/* Desktop Menu */}
-        <ul className="nav-menu desktop-menu">
-          <li>
-            <button
-              className={activeSection === 'hero' ? 'active' : ''}
-              onClick={() => scrollToSection('hero')}
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button
-              className={activeSection === 'about' ? 'active' : ''}
-              onClick={() => scrollToSection('about')}
-            >
-              About
-            </button>
-          </li>
-          <li>
-            <button
-              className={activeSection === 'projects' ? 'active' : ''}
-              onClick={() => scrollToSection('projects')}
-            >
-              Projects
-            </button>
-          </li>
-          <li>
-            <button
-              className={activeSection === 'skills' ? 'active' : ''}
-              onClick={() => scrollToSection('skills')}
-            >
-              Skills
-            </button>
-          </li>
-          <li>
-            <button
-              className={activeSection === 'contact' ? 'active' : ''}
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact
-            </button>
-          </li>
-        </ul>
-
-        {/* Desktop CTA */}
-        <div className="nav-cta desktop-cta">
-          <a href="#contact" className="btn btn-outline">
-            Hire Me
-          </a>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown Menu - Outside of nav container */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        {/* Close Button */}
+        <button 
+          className="mobile-menu-close"
+          onClick={toggleMobileMenu}
+          aria-label="Close mobile menu"
+        >
+          <span>×</span>
+        </button>
+        
         <ul className="mobile-nav-menu">
           <li>
             <button
@@ -191,7 +202,7 @@ export default function Navigation() {
           </a>
         </div>
       </div>
-    </nav>
+    </>
   );
 }
 
