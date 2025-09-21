@@ -14,6 +14,8 @@ body {
   background: #000;
   color: #fff;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 code {
@@ -27,8 +29,10 @@ html {
 
 #root {
   width: 100%;
+  max-width: 100vw;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar */
@@ -53,6 +57,13 @@ html {
 @media (max-width: 768px) {
   body {
     font-size: 14px;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  html {
+    width: 100%;
+    max-width: 100vw;
   }
   
   /* Improve touch targets */
@@ -70,6 +81,18 @@ html {
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure all containers are responsive */
+  * {
+    max-width: 100%;
+  }
+  
+  /* Fix any potential overflow issues */
+  .section, .section-content, .content {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 
