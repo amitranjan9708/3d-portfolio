@@ -8,7 +8,7 @@
   max-width: 100vw;
 }
 
-.hero-content {
+.hero-content { 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -20,6 +20,7 @@
 
 .hero-text {
   z-index: 2;
+  margin-top: 40px;
 }
 
 .hero h1 {

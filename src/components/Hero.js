@@ -53,7 +53,7 @@ export default function Hero() {
             Full Stack Developer &<br />
             <span className="gradient-text">3D Specialist</span>
           </h1>
-          
+           
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

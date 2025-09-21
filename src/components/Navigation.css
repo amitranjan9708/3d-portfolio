@@ -113,6 +113,7 @@
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
+  cursor: pointer;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
